@@ -17,9 +17,9 @@ while  turns > 0:
         for  char  in  word:
             if  char  in  guesses:
                 print(char, end=" ")
-        else :
-            print("_", end=" ")
-            wrong += 1
+            else :
+                print("_", end=" ")
+                wrong += 1
 
         print("\n")
 
@@ -39,8 +39,8 @@ while  turns > 0:
         if  guess  not in  word:
             turns -= 1
 
-        print("Упс! Ошибка")
-        print(f"У тебя осталось {turns} попыток")
+            print("Упс! Ошибка")
+            print(f"У тебя осталось {turns} попыток")
 
-        if  turns == 0:
-            print("Ты проиграл! :(")
+            if  turns == 0:
+                print("Ты проиграл! :(")
