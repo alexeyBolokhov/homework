@@ -12,7 +12,7 @@ while pos < len_my_list:
           print(my_list[pos]) # выводим
           pos = pos + 1 # идем дальше
      else: break # не больше нуля (отрицательное) то стоп
-# print('зевершено')
+print('зевершено')
 ###### все положительные
 # while pos < len_my_list:
 #     if my_list[pos] <= 0: # ототцательные и 0
