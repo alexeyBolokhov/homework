@@ -7,16 +7,17 @@ len_my_list = len(my_list)
 while pos < len_my_list:
      if my_list[pos] == 0 : # 0 - не отрицательное и не положительное число
          pos = pos + 1 # идем дальше
+# если оставить только > 0 то остановиться на 0 и число 99 не выведет
      elif my_list[pos] > 0: # положительное
           print(my_list[pos]) # выводим
           pos = pos + 1 # идем дальше
      else: break # не больше нуля (отрицательное) то стоп
-print('зевершено')
-
+# print('зевершено')
+###### все положительные
 # while pos < len_my_list:
-#     if my_list[pos] < 0: # положительное
-#          pos = pos + 1 #
+#     if my_list[pos] <= 0: # ототцательные и 0
+#          pos = pos + 1 # шаг
 #     print(my_list[pos])  # выводим
-#     pos = pos + 1 #
+#     pos = pos + 1 # шаг
 #
 # print('зевершено')
