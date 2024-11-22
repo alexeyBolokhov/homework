@@ -4,15 +4,15 @@ primes = [] # содержащий только простые числа
 not_primes = [] # содержащий все не простые числа
 #j = 0
 for i in numbers:
-    if i == 1:
-        continue
-    is_prime = True
-    for j in range(2, i):
+    if i == 1: #1 не является ни простым, ни составным
+        continue  #в низ не пойдем
+    is_prime = True  # флаг - простое
+    for j in range(2, i): # делитель со 2го до
 
-        if  i % j == 0: #  не делится на 2? без остатка
-            is_prime = False
+        if  i % j == 0: #   делится
+            is_prime = False #
             break
-    if is_prime:
+    if is_prime: #
         #primes.append(i)
         primes.append(i)
     else:
@@ -21,10 +21,4 @@ for i in numbers:
 print(primes)
 print(not_primes)
 
-    # else:
-    #     not_primes = numbers[j]
-    #     print(not_primes)
 
-# print(primes)
-# print(not_primes)
-# print(range(len(numbers)))
