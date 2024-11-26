@@ -1,18 +1,18 @@
 #Задача "Матрица воплоти"
-### Итооовая в конце, здесь этапы
+## Итооовая в конце, здесь этапы
 # matrix = []
 # for i in range(4): # сколько поставим - столько выведет список
 #     #print(i)
 #     matrix.append([])
 # print(matrix)
-# ########
+########
 # def get_matrix(n):
 #     matrix = []
 #     for i in range(n):
 #         #print(i)
 #         matrix.append([])
 #     print(matrix)
-# result1 = get_matrix(3) # сколько передадим в функцию - столько выведет список
+# result1 = get_matrix(5) # сколько передадим в функцию - столько выведет список
 # print(result1)
 # ########
 # def get_matrix(n, m):
