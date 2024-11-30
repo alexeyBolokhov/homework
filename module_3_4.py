@@ -5,14 +5,17 @@ def single_root_words(root_word, *other_words):
     #for i in other_words:
     #if root_word.casefold() in (name.casefold() for name in other_words): # не работает далее
     list_ = [i.lower() for i in other_words] # преобразуем в нижний списком
-    #for i in other_words:
-    for i in list_:
+    # преобразоване выше работает, но в результат выйдут все в нижнем регистре
+    # поэтому не будем использовать
 
-        if root_word.lower() in i: # если слово содеоиться в списке
+    for i in other_words:
+        if root_word.lower() in i.lower() or i.lower() in root_word.lower():
             same_words.append(i)
-
-        elif i in root_word.lower(): # если из списка сожеджатся в слове
-            same_words.append(i)
+        # if root_word.lower() in i: # если слово содержится в списке
+        #     same_words.append(i)
+        #
+        # elif i in root_word.lower(): # если из списка содержатся в слове
+        #     same_words.append(i)
         else:
             continue
     return same_words
