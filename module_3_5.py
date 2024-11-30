@@ -8,8 +8,8 @@ def get_multiplied_digits(n):
     if len(str_number) > 1 :
         return first * get_multiplied_digits(int(str_number[1:]))
     if first != 0:
-        return first
-    return 1
+        return first # если у нас first не равна нулю, то возвращаем просто first
+    return 1  #если программа не зашла ни в одно условие, то просто возвращаем единиицу
     # else:
     #     return first
 
