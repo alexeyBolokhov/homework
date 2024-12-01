@@ -312,7 +312,35 @@ Helvetios_BL = {
 
 locals_keys = list(locals().keys())[10:]
 mega_dict = {name: globals()[name] for name in locals_keys}
-
+print(type(mega_dict))
+# выведем список карт (без пар)
+# for key in mega_dict:
+#     print (key)
+print(mega_dict.keys())
+marshrut =[]
 # with open("data.json", "w", encoding="utf-8") as json_file:
 #     json.dump(mega_dict, json_file, ensure_ascii=False, indent=4)
-print(mega_dict["Helvetios_BL"])
+#print(mega_dict["Helvetios_BL"])
+map_start = input('Введите имя начальной карты:')
+#print(map_start)
+m1 = mega_dict[map_start]
+print("начальная ", map_start, m1)
+map_end = input('Введите имя карты на которую хотите попасть:')
+#print(map_end)
+m2 = mega_dict[map_end]
+print("конечная ",map_end, m2)
+
+# def maps(m1,m2):
+#     for i in m2.items():
+#         if m1.items() in i :
+#             marshrut.append(i)
+#         else:
+#             continue
+#     return marshrut
+# print(maps(m1,m2))
+for i in m2.items():
+    if m1.items() in i :
+        marshrut.append(i)
+    else:
+        continue
+print(marshrut)
