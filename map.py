@@ -338,9 +338,24 @@ print("конечная ",map_end, m2)
 #             continue
 #     return marshrut
 # print(maps(m1,m2))
-for i in m2.items():
-    if m1.items() in i :
-        marshrut.append(i)
+# for key,i in m1.items():
+#     if map_end in i :
+#         #marshrut.append(i)
+#         print(map_start,key,i)
+#     else:
+#         continue
+for key,i in m1.items():
+    if map_end not in i:
+        for k,j in mega_dict[i].items():
+            #print(mega_dict[i].items())
+            if map_end in j:
+                print(f'маршрут ур2: {map_start}:>>:({key} : {i}): {mega_dict[i]} :>>:({k} : {j})') # карта через одну
+            else: continue
+                #marshrut.append(i)
+
     else:
-        continue
-print(marshrut)
+        print(f'маршрут ур1: {map_start}:>>:({key} : {i})') # карта рядом
+
+#print(map_start,marshrut)
+# ур1: Sadatoni_TR {"TR": "Maia_BR"} Maia_BR
+# ур2: Persei_TL {"BR": "Sirius_BR"} Sirius_BR {"TR": "Eridani_TR"} Eridani_TR
