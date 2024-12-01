@@ -312,6 +312,7 @@ Helvetios_BL = {
 
 locals_keys = list(locals().keys())[10:]
 mega_dict = {name: globals()[name] for name in locals_keys}
+print(type(locals_keys))
 print(type(mega_dict))
 # выведем список карт (без пар)
 # for key in mega_dict:
