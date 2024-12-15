@@ -312,21 +312,25 @@ Helvetios_BL = {
 
 locals_keys = list(locals().keys())[10:]
 mega_dict = {name: globals()[name] for name in locals_keys}
-print(type(locals_keys))
-print(type(mega_dict))
+# print(type(locals_keys))
+#print(type(mega_dict))
+# print('keys_local ',locals_keys)
+# print('all ',mega_dict.items())
+map_start = 'Persei_TL'
+map_end = 'Eridani_TR'
 # выведем список карт (без пар)
-# for key in mega_dict:
+# for key  in mega_dict:
 #     print (key)
-print(mega_dict.keys())
+print(mega_dict.values())
 marshrut =[]
 # with open("data.json", "w", encoding="utf-8") as json_file:
 #     json.dump(mega_dict, json_file, ensure_ascii=False, indent=4)
 #print(mega_dict["Helvetios_BL"])
-map_start = input('Введите имя начальной карты:')
+#map_start = input('Введите имя начальной карты:')
 #print(map_start)
 m1 = mega_dict[map_start]
 print("начальная ", map_start, m1)
-map_end = input('Введите имя карты на которую хотите попасть:')
+#map_end = input('Введите имя карты на которую хотите попасть:')
 #print(map_end)
 m2 = mega_dict[map_end]
 print("конечная ",map_end, m2)
@@ -345,17 +349,45 @@ print("конечная ",map_end, m2)
 #         print(map_start,key,i)
 #     else:
 #         continue
+#for key,i in m1.items():
+# for k,j in mega_dict.items():
+#     print(f'маршрут : :>>:({k} : {j})')
+#     if k in tuple(j.items()):
+#         print(j.items())
+#         #print(f'путь:  :>>:({key} : {i})')
 for key,i in m1.items():
+    #print(f'key_i: {key},{i}')
     if map_end not in i:
         for k,j in mega_dict[i].items():
-            #print(mega_dict[i].items())
+            #print(f'kj : {k},{j}')
             if map_end in j:
-                print(f'маршрут ур2: {map_start}:>>:({key} : {i}): {mega_dict[i]} :>>:({k} : {j})') # карта через одну
+                print(f'маршрут ур2: старт:{map_start}:>>:({key} : {i}): >>:{mega_dict[i]} :>>:({k} : {j})') # карта через одну
             else: continue
                 #marshrut.append(i)
 
     else:
         print(f'маршрут ур1: {map_start}:>>:({key} : {i})') # карта рядом
+#######
+# map1 = 7
+# dict = {3:{'a':7,'b':8},5:{'a':7,'b':5}}
+# #print (dict [10]['a'])
+# for i in dict.keys():
+#     #print('key:',i)
+#     for j in dict[i].values():
+#         #print('val',j)
+#         if map1 == j:
+#             print(dict[i].values())
+######
+for i in mega_dict.keys():
+    #print('key:',i)
+    if map_start == i:
+        for j in mega_dict[i].values():
+            #print('val',j)
+            if map_end == j :
+                print(mega_dict[i].values())
+
+# for f in mega_dict.values():
+#     print(f)
 
 #print(map_start,marshrut)
 # ур1: Sadatoni_TR {"TR": "Maia_BR"} Maia_BR
