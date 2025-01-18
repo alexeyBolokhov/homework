@@ -1,5 +1,5 @@
 # Задание "Свой YouTube":
-
+import time
 class Video:
     def __init__(self, title: str, duration: int, time_now = 0, adult_mode = False):
     #Атриубуты: title(заголовок, строка), duration(продолжительность, секунды), time_now(секунда остановки (изначально 0)),
