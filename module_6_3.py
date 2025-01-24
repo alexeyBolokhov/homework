@@ -40,8 +40,9 @@ class Bird(Animal):
 class AquaticAnimal(Animal):
     _DEGREE_OF_DANGER = 3
     def dive_in(self, dz):
-        new_z = self._cords[2] - abs(dz) * .5 * self.speed # всегда уменьшать координату z (_cords[2] )
-        self._cords[2] = max(new_z, 0) ######
+        # new_z = self._cords[2] - abs(dz) * .5 * self.speed # всегда уменьшать координату z (_cords[2] )
+        # self._cords[2] = max(new_z, 0) ######
+        self._cords[2] = abs(int(self._cords[2]) // int(self.speed)) - dz // 2 # целочисленное делние //
 
 class PoisonousAnimal(Animal):
     _DEGREE_OF_DANGER = 8
